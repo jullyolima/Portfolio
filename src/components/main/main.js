@@ -19,10 +19,10 @@ class Main extends React.Component {
       <div className="canvas">
 
       {/* The User */}
-      <img className="player" alt="You" src="./assets/ball.jpg"></img>
+      <img className="player" alt="You" src={require('./assets/ball.jpg')}></img>
 
       {/* The Houses */}
-      <img className="resume" alt="Resume" src="./assets/resumeHouse.gif"></img>
+      <img className="resume" alt="Resume" src={require('./assets/resumeHouse.gif')}></img>
 
 
 

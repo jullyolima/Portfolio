@@ -9,10 +9,12 @@
     height: 8%;
     width: 4%;
     left: 400px;
-    top: 495px
+    top: 495px;
+    z-index: 5;
 }
 
 .resume {
+    position: fixed;
     left: 400px;
     top: 300px
 }

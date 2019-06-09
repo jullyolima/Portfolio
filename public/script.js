@@ -21,7 +21,7 @@ $(document).keydown(function (e) {
         }, 100);
         break;
 
-    case 40: //down
+      case 40: //down
         console.log("Down")
         $(".player").finish().animate({
             top: "+=10"

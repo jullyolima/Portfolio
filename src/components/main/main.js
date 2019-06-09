@@ -18,7 +18,11 @@ class Main extends React.Component {
     return (
       <div className="canvas">
 
-      <img className="player" src="./assets/ball.jpg"></img>
+      {/* The User */}
+      <img className="player" alt="You" src="./assets/ball.jpg"></img>
+
+      {/* The Houses */}
+      <img className="resume" alt="Resume" src="./assets/resumeHouse.gif"></img>
 
 
 

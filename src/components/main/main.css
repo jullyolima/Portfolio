@@ -1,0 +1,13 @@
+.canvas {
+    height:100vh;
+    width:100vw;
+    background-color:lightblue;
+}
+
+.player {
+    position: fixed;
+    height: 8%;
+    width: 4%;
+    left: 400px;
+    top: 495px
+}

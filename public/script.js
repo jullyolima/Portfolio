@@ -24,6 +24,22 @@ $(document).keydown(function (e) {
   let resumeHouse = $(".resume");
   let projectsHouse = $(".projects");
   let contactHouse = $(".contact");
+  let aboutmeHouse = $(".aboutMe");
+
+  let checkCollisions = function() {
+    if (collision(resumeHouse, player)) {
+      console.log("Touching Resume Building")
+    }
+    if (collision(projectsHouse, player)) {
+      console.log("Touching Projects Building")
+    }
+    if (collision(contactHouse, player)) {
+      console.log("Touching Contact Info Building")
+    }
+    if (collision(aboutmeHouse, player)) {
+      console.log("Touching About Me Info Building")
+    }
+  }
 
     switch (e.which) {
 
@@ -33,15 +49,7 @@ $(document).keydown(function (e) {
             top: "-=10"
         }, 100);
 
-        if (collision(resumeHouse, player)) {
-          console.log("Touching Resume Building")
-        }
-        if (collision(projectsHouse, player)) {
-          console.log("Touching Projects Building")
-        }
-        if (collision(contactHouse, player)) {
-          console.log("Touching Contact Info Building")
-        }
+        checkCollisions();
         break;
 
 

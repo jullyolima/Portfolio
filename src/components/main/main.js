@@ -22,10 +22,10 @@ class Main extends React.Component {
       <img className="player" alt="You" src={require('./assets/ball.jpg')}></img>
 
       {/* The Houses */}
-      <img className="resume" alt="Resume" src={require('./assets/resumeHouse.gif')}></img>
-
-
-
+      <img className="resume" alt="Resume" src={require('./assets/resumeHouse.png')}></img>
+      <img className="projects" alt="Projects" src={require('./assets/projectsHouse.png')}></img>
+      <img className="contact" alt="Contact Info" src={require('./assets/contactHouse.png')}></img>
+      <img className="aboutMe" alt="About Me" src={require('./assets/aboutmeHouse.png')}></img>
 
 
 

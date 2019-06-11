@@ -1,7 +1,11 @@
 .canvas {
     height:100vh;
     width:100vw;
-    background-color:lightblue;
+    background-color:rgb(112, 75, 7);
+    background-image: url("./assets/map.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+background-position:center;
 }
 
 .player {
@@ -14,7 +18,25 @@
 }
 
 .resume {
-    position: fixed;
-    left: 400px;
-    top: 300px
+    position: absolute;
+    left: 10%;  
+    top: 8%
+}
+
+.projects {
+    position: absolute;
+    left: 78%;
+    top: 55%
+}
+
+.contact {
+    position: absolute;
+    left: 5.5%;
+    top: 55%
+}
+
+.aboutMe {
+    position: absolute;
+    left: 78%;
+    top: 8%
 }

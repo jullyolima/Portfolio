@@ -22,6 +22,8 @@ function collision(obj1, obj2) {
 $(document).keydown(function (e) {
   let player = $(".player");
   let resumeHouse = $(".resume");
+  let projectsHouse = $(".projects");
+  let contactHouse = $(".contact");
 
     switch (e.which) {
 
@@ -33,6 +35,12 @@ $(document).keydown(function (e) {
 
         if (collision(resumeHouse, player)) {
           console.log("Touching Resume Building")
+        }
+        if (collision(projectsHouse, player)) {
+          console.log("Touching Projects Building")
+        }
+        if (collision(contactHouse, player)) {
+          console.log("Touching Contact Info Building")
         }
         break;
 

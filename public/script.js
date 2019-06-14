@@ -1,3 +1,16 @@
+$(document).ready(function () {
+$('#resumeBox').hide();
+$('#projectsBox').hide();  
+$('#aboutMeBox').hide();  
+$('#contactBox').hide();  
+
+$( ".close" ).click(function() {
+  $('#welcomeBox').hide();
+});
+})
+
+
+
 // Function which detects collision
 function collision(obj1, obj2) {
   let x1 = obj1.offset().left;

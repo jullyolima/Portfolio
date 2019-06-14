@@ -5,7 +5,8 @@
     background-image: url("./assets/map.png");
     background-repeat:no-repeat;
     background-size:cover;
-background-position:center;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 .player {
@@ -17,26 +18,30 @@ background-position:center;
     z-index: 5;
 }
 
-.resume {
-    position: absolute;
-    left: 10%;  
-    top: 8%
-}
-
-.projects {
-    position: absolute;
-    left: 78%;
-    top: 55%
-}
-
 .contact {
     position: absolute;
-    left: 5.5%;
-    top: 55%
+    left: 10%;  
+    top: 3%;
+    height:15%;
 }
 
 .aboutMe {
     position: absolute;
-    left: 78%;
-    top: 8%
+    left: 76%;
+    top: 56%;
+    height:17%;
+}
+
+.resume {
+    position: absolute;
+    left: 5.5%;
+    top: 61%;
+    height:15%;
+}
+
+.projects {
+    position: absolute;
+    left: 80%;
+    top: 6%;
+    height:15%;
 }

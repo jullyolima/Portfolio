@@ -1,17 +1,25 @@
 $(document).ready(function () {
+
+
+//hides all popups on load up  
+hideHouses();
+
+//button to close boxes
+$( ".close" ).click(function() {
+  $('#welcomeBox').hide();
+  hideHouses(); 
+});
+
+})
+//function that closes any and all "house" boxes
+function hideHouses () {
 $('#resumeBox').hide();
 $('#projectsBox').hide();  
 $('#aboutMeBox').hide();  
-$('#contactBox').hide();  
+$('#contactBox').hide(); 
+}
 
-$( ".close" ).click(function() {
-  $('#welcomeBox').hide();
-});
-})
-
-
-
-// Function which detects collision
+// Function that detects collision
 function collision(obj1, obj2) {
   let x1 = obj1.offset().left;
   let y1 = obj1.offset().top;
@@ -30,8 +38,8 @@ function collision(obj1, obj2) {
   return true;
 }
 
-
-//All of the player movements - includes detection logic
+let colliding = false;
+//All of the player movements
 $(document).keydown(function (e) {
   let player = $(".player");
   let resumeHouse = $(".resume");
@@ -42,15 +50,27 @@ $(document).keydown(function (e) {
   let checkCollisions = function() {
     if (collision(resumeHouse, player)) {
       console.log("Touching Resume Building")
+      $('#resumeBox').show();
+      colliding = true;
+      setTimeout(function(){ colliding = false }, 500);
     }
     if (collision(projectsHouse, player)) {
       console.log("Touching Projects Building")
+      $('#projectsBox').show(); 
+      colliding = true;
+      setTimeout(function(){ colliding = false }, 500);
     }
     if (collision(contactHouse, player)) {
       console.log("Touching Contact Info Building")
+      $('#contactBox').show();  
+      colliding = true;
+      setTimeout(function(){ colliding = false }, 500);
     }
     if (collision(aboutmeHouse, player)) {
       console.log("Touching About Me Info Building")
+      $('#aboutMeBox').show();
+      colliding = true;
+      setTimeout(function(){ colliding = false }, 500); 
     }
   }
 
@@ -63,6 +83,14 @@ $(document).keydown(function (e) {
         }, 100);
 
         checkCollisions();
+
+        //if collision is detected, bounce back
+        if (colliding) {
+        $(".player").finish().animate({
+            top: "+=20"
+        }, 100);
+        }
+
         break;
 
 
@@ -71,8 +99,16 @@ $(document).keydown(function (e) {
         $(".player").finish().animate({
             left: "-=10"
         }, 100);
-        // movingLeft = true;
-        // movingUp = false;
+
+        checkCollisions();
+
+        //if collision is detected, bounce back
+        if (colliding) {
+        $(".player").finish().animate({
+            left: "+=20"
+        }, 100);
+        }
+
         break;
 
 
@@ -81,6 +117,16 @@ $(document).keydown(function (e) {
         $(".player").finish().animate({
             left: "+=10"
         }, 100);
+
+        checkCollisions();
+
+        //if collision is detected, bounce back
+        if (colliding) {
+        $(".player").finish().animate({
+            left: "-=20"
+        }, 100);  
+        }
+
         break;
 
 
@@ -89,5 +135,18 @@ $(document).keydown(function (e) {
         $(".player").finish().animate({
             top: "+=10"
         }, 100); 
+
+        checkCollisions();
+
+        //if collision is detected, bounce back
+        if (colliding) {
+        $(".player").finish().animate({
+            top: "-=20"
+        }, 100);   
+        }
     }
   });
+
+
+  //in collision function
+  // if collision true set collion to true and check for that function in movement to set back equal movement axies

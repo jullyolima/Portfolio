@@ -41,34 +41,38 @@ class Main extends React.Component {
 
 
 
-        <div id="welcomeBox" class="modal">
-          <div class="modal-content">
-            <span class="close">&times;</span>
+        <div id="welcomeBox" className="modal">
+          <div className="modal-content">
+            <span className="close">&times;</span>
             <p>hello</p>
           </div>
         </div>
 
-        <div id="resumeBox" class="modal">
-          <div class="modal-content">
-            <p>hello</p>
+        <div id="resumeBox" className="modal">
+          <div className="modal-content">
+            <span className="close">&times;</span>
+            <p>Resume</p>
           </div>
         </div>
 
-        <div id="projectsBox" class="modal">
-          <div class="modal-content">
-            <p>hello</p>
+        <div id="projectsBox" className="modal">
+          <div className="modal-content">
+            <span className="close">&times;</span>
+            <p>Projects</p>
           </div>
         </div>
 
-        <div id="aboutMeBox" class="modal">
-          <div class="modal-content">
-            <p>hello</p>
+        <div id="aboutMeBox" className="modal">
+          <div className="modal-content">
+            <span className="close">&times;</span>
+            <p>About Me</p>
           </div>
         </div>
 
-        <div id="contactBox" class="modal">
-          <div class="modal-content">
-            <p>hello</p>
+        <div id="contactBox" className="modal">
+          <div className="modal-content">
+            <span className="close">&times;</span>
+            <p>contact</p>
           </div>
         </div>
 

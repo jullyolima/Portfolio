@@ -40,14 +40,18 @@ class Main extends React.Component {
 
 
 
-
+        {/* ------------------------------------Welcome Screen Box---------------------------------- */}
         <div id="welcomeBox" className="modal">
-          <div className="modal-content">
+          <div id="welcomeBoxContent" className="modal-content">
             <span className="close">&times;</span>
-            <p>hello</p>
+            <p className="boxText">Welcome to my interactive portfolio, my name is Jullyo Lima and I am an aspiring Web Developer.</p>
+            <br></br>
+            <p className="boxText">Use the Arrow keys to move around the map and go to the different houses to learn more about me,
+               to look at my projects, and to find my contact information!</p>
           </div>
         </div>
 
+        {/* ------------------------------------Resume Box---------------------------------- */}
         <div id="resumeBox" className="modal">
           <div className="modal-content">
             <span className="close">&times;</span>
@@ -55,13 +59,17 @@ class Main extends React.Component {
           </div>
         </div>
 
+        {/* ------------------------------------Projects Box---------------------------------- */}
         <div id="projectsBox" className="modal">
           <div className="modal-content">
             <span className="close">&times;</span>
-            <p>Projects</p>
+            {/* Maybe Make this a scrollable box to be able to show description, pics etc. */}
+            <h6 className="boxHeader">My Projects</h6>
+            <p className="boxText">Projects</p>
           </div>
         </div>
 
+        {/* ------------------------------------About Me Box---------------------------------- */}
         <div id="aboutMeBox" className="modal">
           <div className="modal-content">
             <span className="close">&times;</span>
@@ -69,6 +77,7 @@ class Main extends React.Component {
           </div>
         </div>
 
+        {/* ------------------------------------Contact Me Box---------------------------------- */}
         <div id="contactBox" className="modal">
           <div className="modal-content">
             <span className="close">&times;</span>

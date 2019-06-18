@@ -61,12 +61,28 @@ class Main extends React.Component {
 
         {/* ------------------------------------Projects Box---------------------------------- */}
         <div id="projectsBox" className="modal">
-          <div className="modal-content">
+
+          <div id="projectsContent" className="modal-content">
             <span className="close">&times;</span>
-            {/* Maybe Make this a scrollable box to be able to show description, pics etc. */}
+
             <h6 className="boxHeader">My Projects</h6>
-            <p className="boxText">Projects</p>
+
+            <div id="projectsContainer">
+
+              <div className="projectsSection">
+                {/* Make an object with the projects and loop through it in order to dynamically add more projects */}
+
+                <h6 className="projectsTitle"></h6>
+                <img className="projectsImg"></img>
+                <p className="projectsDesc"></p>
+
+              </div>
+
+
+            </div>
+
           </div>
+
         </div>
 
         {/* ------------------------------------About Me Box---------------------------------- */}

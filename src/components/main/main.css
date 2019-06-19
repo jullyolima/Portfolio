@@ -105,12 +105,16 @@
 .boxHeader {
  text-align:center;
  margin:none;
+ font-size:1.8em;
+ text-shadow: 2px 2px 4px #000000;
+ font-family: 'Acme', sans-serif;
 }
 
 .boxText {
  font-size:.7em;
+ text-shadow: 1px 1px 4px #000000;
  text-align:center;
-
+ font-family: 'Acme', sans-serif;
 }
 
 
@@ -134,18 +138,68 @@
 }
 
 #projectsContent {
-    height:75vh;
-    width:40vw;
+    height:85vh;
+    width:50vw;
     margin-top:5vh;
 }
 
 #projectsContainer {
     background-color:rgb(170, 135, 69);
     border-radius:10%;
-    height:60vh;
-    width: 35vw;
+    height:73vh;
+    width: 45vw;
     margin:auto;
     margin-top:5vh;
     overflow: auto;
 
+}
+
+.projectsSection {
+    background-color:rgb(95, 80, 67);
+    border-radius:10%;
+    height:68vh;
+    width:30vw;
+    margin:auto;
+    margin-top:1.5%;
+    padding: 3% 1.5% 0 1.5%;
+}
+
+.projectsTitle {
+    font-size:1.5em;
+    text-shadow: 2px 2px 4px #000000;
+    margin-bottom:3%;
+    font-family: 'Acme', sans-serif;
+}
+
+.projectsImg {
+    height:30vh;
+    width: 28vw; 
+    margin-bottom: 1.5%;
+}
+
+.projectsDesc {
+    font-size:.8em;
+    line-height:110%;
+    text-shadow: 1px 1px 4px #000000;
+    font-family: 'Acme', sans-serif;
+}
+
+.projectsLinkContainer {
+    background-color:rgb(189, 155, 126);
+    border-radius:20%;
+    height: 12vh;
+    width: 28vw;
+    margin:auto;
+    margin-top: 5%;
+    padding: 2% 2% 2% 2%;
+}
+
+.projectsLink {
+    text-shadow: 1px 1px 4px #000000;
+    float:left;
+    margin-top:2.5%;
+}
+
+.projectsAnchor {
+    font-size:.8em;
 }

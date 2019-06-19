@@ -72,10 +72,14 @@ class Main extends React.Component {
               <div className="projectsSection">
                 {/* Make an object with the projects and loop through it in order to dynamically add more projects */}
 
-                <h6 className="projectsTitle"></h6>
-                <img className="projectsImg"></img>
-                <p className="projectsDesc"></p>
+                <h6 className="projectsTitle">Pokedecks</h6>
+                <img className="projectsImg" alt="Pokedecks" src={require('./assets/pokedecks.PNG')}></img>
+                <p className="projectsDesc">Pokedecks is a turn-based multiplayer card game that I created for my Bootcamp final project with a partner. It utilizes Socket.io, React, and React-DnD to create a seamless, captavating game.</p>
 
+                <div className="projectsLinkContainer">
+                <p className="projectsLink">Github Repo: <a className="projectsAnchor" href="https://github.com/corbinho/Pokemon" target="_blank">Link</a></p>
+                <p className="projectsLink">Deployed Website: <a className="projectsAnchor" href="http://young-reaches-26475.herokuapp.com/" target="_blank">Link (2-players)</a></p>
+                </div>
               </div>
 
 

@@ -149,7 +149,7 @@
     height:73vh;
     width: 45vw;
     margin:auto;
-    margin-top:5vh;
+    margin-top:2vh;
     overflow: auto;
 
 }
@@ -157,7 +157,7 @@
 .projectsSection {
     background-color:rgb(95, 80, 67);
     border-radius:10%;
-    height:68vh;
+    height:70vh;
     width:30vw;
     margin:auto;
     margin-top:1.5%;
@@ -172,6 +172,7 @@
 }
 
 .projectsImg {
+    background-color:black;
     height:30vh;
     width: 28vw; 
     margin-bottom: 1.5%;
@@ -187,10 +188,10 @@
 .projectsLinkContainer {
     background-color:rgb(189, 155, 126);
     border-radius:20%;
-    height: 12vh;
+    height: 10vh;
     width: 28vw;
     margin:auto;
-    margin-top: 5%;
+    margin-top: 1%;
     padding: 2% 2% 2% 2%;
 }
 
@@ -198,6 +199,7 @@
     text-shadow: 1px 1px 4px #000000;
     float:left;
     margin-top:2.5%;
+    font-size:.8em;
 }
 
 .projectsAnchor {

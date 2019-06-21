@@ -70,7 +70,6 @@ class Main extends React.Component {
             <div id="projectsContainer">
 
               <div className="projectsSection">
-                {/* Make an object with the projects and loop through it in order to dynamically add more projects */}
 
                 <h6 className="projectsTitle">Pokedecks</h6>
                 <img className="projectsImg" alt="Pokedecks" src={require('./assets/pokedecks.PNG')}></img>
@@ -78,8 +77,24 @@ class Main extends React.Component {
 
                 <div className="projectsLinkContainer">
                 <p className="projectsLink">Github Repo: <a className="projectsAnchor" href="https://github.com/corbinho/Pokemon" target="_blank">Link</a></p>
+                <br></br>
                 <p className="projectsLink">Deployed Website: <a className="projectsAnchor" href="http://young-reaches-26475.herokuapp.com/" target="_blank">Link (2-players)</a></p>
                 </div>
+
+              </div>
+
+              <div className="projectsSection">
+
+                <h6 className="projectsTitle">Doctor Finder</h6>
+                <img className="projectsImg" alt="Doctor Finder" src={require('./assets/doctorFinder.PNG')}></img>
+                <p className="projectsDesc">A doctor search engine that displays the nearest doctors around you based on your search criteria. It utilizes the Google Maps API, a doctor database API, and a recent medical news API.</p>
+
+                <div className="projectsLinkContainer">
+                <p className="projectsLink">Github Repo: <a className="projectsAnchor" href="https://github.com/jullyolima/Doctor-Finder" target="_blank">Link</a></p>
+                <br></br>
+                <p className="projectsLink">Deployed Website: <a className="projectsAnchor" href="https://jullyolima.github.io/Doctor-Finder/" target="_blank">Link</a></p>
+                </div>
+                
               </div>
 
 

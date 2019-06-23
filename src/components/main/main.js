@@ -67,8 +67,10 @@ class Main extends React.Component {
 
             <h6 className="boxHeader">My Projects</h6>
 
+            {/* Container holding all projects */}
             <div id="projectsContainer">
 
+              {/* Pokedecks Project */}
               <div className="projectsSection">
 
                 <h6 className="projectsTitle">Pokedecks</h6>
@@ -83,6 +85,7 @@ class Main extends React.Component {
 
               </div>
 
+              {/* Doctor Finder Project */}
               <div className="projectsSection">
 
                 <h6 className="projectsTitle">Doctor Finder</h6>
@@ -93,6 +96,21 @@ class Main extends React.Component {
                 <p className="projectsLink">Github Repo: <a className="projectsAnchor" href="https://github.com/jullyolima/Doctor-Finder" target="_blank">Link</a></p>
                 <br></br>
                 <p className="projectsLink">Deployed Website: <a className="projectsAnchor" href="https://jullyolima.github.io/Doctor-Finder/" target="_blank">Link</a></p>
+                </div>
+                
+              </div>
+
+
+              <div className="projectsSection">
+
+                <h6 className="projectsTitle">Crystal Collector</h6>
+                <img className="projectsImg" alt="Doctor Finder" src={require('./assets/crystalCollector.PNG')}></img>
+                <p className="projectsDesc">A simple addictive game I made designed to be played on mobile phones. I've added my own twist that makes it into strategy math game, with highscores implemented.</p>
+
+                <div className="projectsLinkContainer">
+                <p className="projectsLink">Github Repo: <a className="projectsAnchor" href="https://github.com/jullyolima/Crystal-Collector" target="_blank">Link</a></p>
+                <br></br>
+                <p className="projectsLink">Deployed Website: <a className="projectsAnchor" href="https://jullyolima.github.io/Crystal-Collector/" target="_blank">Link</a></p>
                 </div>
                 
               </div>

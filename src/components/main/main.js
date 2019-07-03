@@ -78,9 +78,9 @@ class Main extends React.Component {
                 <p className="projectsDesc">Pokedecks is a turn-based multiplayer card game that I created for my Bootcamp final project with a partner. It utilizes Socket.io, React, and React-DnD to create a seamless, captavating game.</p>
 
                 <div className="projectsLinkContainer">
-                <p className="projectsLink">Github Repo: <a className="projectsAnchor" href="https://github.com/corbinho/Pokemon" target="_blank">Link</a></p>
-                <br></br>
-                <p className="projectsLink">Deployed Website: <a className="projectsAnchor" href="http://young-reaches-26475.herokuapp.com/" target="_blank">Link (2-players)</a></p>
+                  <p className="projectsLink">Github Repo: <a className="projectsAnchor" href="https://github.com/corbinho/Pokemon" target="_blank">Link</a></p>
+                  <br></br>
+                  <p className="projectsLink">Deployed Website: <a className="projectsAnchor" href="http://young-reaches-26475.herokuapp.com/" target="_blank">Link (2-players)</a></p>
                 </div>
 
               </div>
@@ -93,11 +93,11 @@ class Main extends React.Component {
                 <p className="projectsDesc">A doctor search engine that displays the nearest doctors around you based on your search criteria. It utilizes the Google Maps API, a doctor database API, and a recent medical news API.</p>
 
                 <div className="projectsLinkContainer">
-                <p className="projectsLink">Github Repo: <a className="projectsAnchor" href="https://github.com/jullyolima/Doctor-Finder" target="_blank">Link</a></p>
-                <br></br>
-                <p className="projectsLink">Deployed Website: <a className="projectsAnchor" href="https://jullyolima.github.io/Doctor-Finder/" target="_blank">Link</a></p>
+                  <p className="projectsLink">Github Repo: <a className="projectsAnchor" href="https://github.com/jullyolima/Doctor-Finder" target="_blank">Link</a></p>
+                  <br></br>
+                  <p className="projectsLink">Deployed Website: <a className="projectsAnchor" href="https://jullyolima.github.io/Doctor-Finder/" target="_blank">Link (Github Pages)</a></p>
                 </div>
-                
+
               </div>
 
 
@@ -108,11 +108,11 @@ class Main extends React.Component {
                 <p className="projectsDesc">A simple addictive game I made designed to be played on mobile phones. I've added my own twist that makes it into strategy math game, with highscores implemented.</p>
 
                 <div className="projectsLinkContainer">
-                <p className="projectsLink">Github Repo: <a className="projectsAnchor" href="https://github.com/jullyolima/Crystal-Collector" target="_blank">Link</a></p>
-                <br></br>
-                <p className="projectsLink">Deployed Website: <a className="projectsAnchor" href="https://jullyolima.github.io/Crystal-Collector/" target="_blank">Link</a></p>
+                  <p className="projectsLink">Github Repo: <a className="projectsAnchor" href="https://github.com/jullyolima/Crystal-Collector" target="_blank">Link</a></p>
+                  <br></br>
+                  <p className="projectsLink">Deployed Website: <a className="projectsAnchor" href="https://jullyolima.github.io/Crystal-Collector/" target="_blank">Link (Github Pages)</a></p>
                 </div>
-                
+
               </div>
 
 
@@ -132,9 +132,32 @@ class Main extends React.Component {
 
         {/* ------------------------------------Contact Me Box---------------------------------- */}
         <div id="contactBox" className="modal">
-          <div className="modal-content">
+          <div id="contactContainer" className="modal-content">
             <span className="close">&times;</span>
-            <p>contact</p>
+            <div className="projectsTitle">Contact Me</div>
+            <div id="contactInner">
+
+              <div className="contactLinkBox">
+                <h6 className="projectsDesc">LinkedIn</h6>
+                <a className="projectsAnchor" href="https://linkedin.com/in/jullyo-lima-553baa172" target="_blank">My Profile</a>
+              </div>
+
+              <br></br>
+
+              <div className="contactLinkBox">
+                <h6 className="projectsDesc">Github</h6>
+                <a className="projectsAnchor" href="https://github.com/jullyolima" target="_blank">My Github Profile</a>
+              </div>
+
+              <br></br>
+
+              <div className="contactLinkBox">
+                <h6 className="projectsDesc">Email</h6>
+                <a href="mailto:jullyolima@hotmail.com?Subject=Hello%20Jullyo" target="_top">Email Me</a>
+              </div>
+
+            </div>
+
           </div>
         </div>
 

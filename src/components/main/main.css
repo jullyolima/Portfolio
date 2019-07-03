@@ -46,9 +46,33 @@
     height:15%;
 }
 
+/* ----------------------------------------------------Scrollbar CSS------------------------------------------------ */
 
-
-
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(145, 88, 4); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #807c76; 
+  }
+  
+  ::-webkit-scrollbar-corner {
+    background: rgb(145, 88, 4); 
+  }
 
 
 
@@ -188,7 +212,7 @@
 .projectsLinkContainer {
     background-color:rgb(189, 155, 126);
     border-radius:20%;
-    height: 10vh;
+    height: 12vh;
     width: 28vw;
     margin:auto;
     margin-top: 1%;
@@ -204,4 +228,32 @@
 
 .projectsAnchor {
     font-size:.8em;
+}
+
+
+
+/* Contact House */
+
+#contactContainer {
+    height:65vh;
+    width:30vw;
+    margin-top:0vh;
+}
+
+#contactInner {
+    background-color:rgb(170, 135, 69);
+    border-radius:10%;
+    margin:auto;
+    height:50vh;
+    width:28vw;
+    padding-top:5vh;
+}
+
+.contactLinkBox {
+    background-color:rgb(139, 107, 47);
+    border-radius:10%;
+    margin:auto;
+    height:10vh;
+    width: 20vw;
+    padding-top:1vh;
 }

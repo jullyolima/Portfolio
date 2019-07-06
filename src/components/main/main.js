@@ -3,6 +3,7 @@ import "./main.css"
 import Contact from "../contact/contact"
 import Projects from "../projects/projects"
 import Resume from "../resume/resume"
+import AboutMe from "../aboutMe/aboutMe"
 
 class Main extends React.Component {
   constructor(props) {
@@ -31,17 +32,6 @@ class Main extends React.Component {
         <img className="aboutMe" alt="About Me" src={require('./assets/aboutmeHouse.png')}></img>
 
 
-
-
-
-
-
-
-
-
-
-
-
         {/* ------------------------------------Welcome Screen Box---------------------------------- */}
         <div id="welcomeBox" className="modal">
           <div id="welcomeBoxContent" className="modal-content">
@@ -53,29 +43,14 @@ class Main extends React.Component {
           </div>
         </div>
 
-        {/* ------------------------------------Resume Box---------------------------------- */}
+
         <Resume></Resume>
 
-        {/* ------------------------------------Projects Box---------------------------------- */}
         <Projects></Projects>
 
-        {/* ------------------------------------About Me Box---------------------------------- */}
-        <div id="aboutMeBox" className="modal">
-          <div className="modal-content">
-            <span className="close">&times;</span>
-            <p>About Me</p>
-          </div>
-        </div>
+        <AboutMe></AboutMe>
 
-        {/* ------------------------------------Contact Me Box---------------------------------- */}
         <Contact></Contact>
-
-
-
-
-
-
-
 
       </div>
     )

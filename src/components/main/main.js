@@ -1,5 +1,6 @@
 import React from "react";
 import "./main.css"
+import Welcome from "../welcome/welcome"
 import Contact from "../contact/contact"
 import Projects from "../projects/projects"
 import Resume from "../resume/resume"
@@ -33,17 +34,9 @@ class Main extends React.Component {
 
 
         {/* ------------------------------------Welcome Screen Box---------------------------------- */}
-        <div id="welcomeBox" className="modal">
-          <div id="welcomeBoxContent" className="modal-content">
-            <span className="close">&times;</span>
-            <p className="boxText">Welcome to my interactive portfolio, my name is Jullyo Lima and I am an aspiring Web Developer.</p>
-            <br></br>
-            <p className="boxText">Use the Arrow keys to move around the map and go to the different houses to learn more about me,
-               to look at my projects, and to find my contact information!</p>
-          </div>
-        </div>
+        <Welcome></Welcome>
 
-
+        {/* ------------------------------------House Boxes---------------------------------- */}
         <Resume></Resume>
 
         <Projects></Projects>

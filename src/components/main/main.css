@@ -257,3 +257,21 @@
     width: 20vw;
     padding-top:1vh;
 }
+
+
+/* Resume House */
+
+#resumeContainer {
+    height:30vh;
+    width:30vw;
+    margin-top:0vh;
+}
+
+#resumeInner {
+    background-color:rgb(170, 135, 69);
+    border-radius:10%;
+    margin:auto;
+    height:16vh;
+    width:28vw;
+    padding-top:5vh;
+}

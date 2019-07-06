@@ -53,9 +53,13 @@ class Main extends React.Component {
 
         {/* ------------------------------------Resume Box---------------------------------- */}
         <div id="resumeBox" className="modal">
-          <div className="modal-content">
+          <div id="resumeContainer" className="modal-content">
             <span className="close">&times;</span>
-            <p>Resume</p>
+            <div className="projectsTitle">My Resume</div>
+
+            <div id="resumeInner">
+            <a href={require('./assets/Resume.pdf')} target="_blank" download>Download My Resume (PDF) </a>
+            </div>
           </div>
         </div>
 

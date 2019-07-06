@@ -2,7 +2,7 @@ import React from "react";
 import "./main.css"
 import Contact from "../contact/contact"
 import Projects from "../projects/projects"
-
+import Resume from "../resume/resume"
 
 class Main extends React.Component {
   constructor(props) {
@@ -54,16 +54,7 @@ class Main extends React.Component {
         </div>
 
         {/* ------------------------------------Resume Box---------------------------------- */}
-        <div id="resumeBox" className="modal">
-          <div id="resumeContainer" className="modal-content">
-            <span className="close">&times;</span>
-            <div className="projectsTitle">My Resume</div>
-
-            <div id="resumeInner">
-            <a href={require('./assets/Resume.pdf')} target="_blank" download>Download My Resume (PDF) </a>
-            </div>
-          </div>
-        </div>
+        <Resume></Resume>
 
         {/* ------------------------------------Projects Box---------------------------------- */}
         <Projects></Projects>

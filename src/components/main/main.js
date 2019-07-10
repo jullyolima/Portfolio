@@ -24,7 +24,7 @@ class Main extends React.Component {
       <div className="canvas">
 
         {/* The User */}
-        <img className="player" alt="You" src={require('./assets/ball.jpg')}></img>
+        <p className="player" alt="You" ></p>
 
         {/* The Houses */}
         <img className="resume" alt="Resume" src={require('./assets/resumeHouse.png')}></img>

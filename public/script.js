@@ -47,6 +47,29 @@ $(document).keydown(function (e) {
   let contactHouse = $(".contact");
   let aboutmeHouse = $(".aboutMe");
 
+  var tID; //we will use this variable to clear the setInterval()
+function stopAnimate() {
+clearInterval(tID);
+}
+ //end of stopAnimate()
+function animateScript() {
+var    position = 400; //start position for the image slicer
+const  interval = 100; //100 ms of interval for the setInterval()
+const  diff = 400;     //diff as a variable for position offset
+tID = setInterval ( () => {
+$('.player').css('background-position', `-${position}px 0px`);
+//we use the ES6 template literal to insert the variable "position"
+if (position < 1601)
+{ position = position + 
+diff;}
+//we increment the position by 400 each time
+else
+{ position = 400; }
+//reset the position to 400px, once position exceeds 1536px
+}
+, interval ); //end of setInterval
+} //end of animateScript()
+
   let checkCollisions = function() {
     if (collision(resumeHouse, player)) {
       console.log("Touching Resume Building")
@@ -82,6 +105,7 @@ $(document).keydown(function (e) {
             top: "-=10"
         }, 100);
 
+        animateScript();
         checkCollisions();
 
         //if collision is detected, bounce back

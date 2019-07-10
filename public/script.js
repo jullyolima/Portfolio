@@ -53,19 +53,19 @@ clearInterval(tID);
 }
  //end of stopAnimate()
 function animateScript() {
-var    position = 400; //start position for the image slicer
+var    position = 50; //start position for the image slicer
 const  interval = 100; //100 ms of interval for the setInterval()
-const  diff = 400;     //diff as a variable for position offset
+const  diff = 50;     //diff as a variable for position offset
 tID = setInterval ( () => {
 $('.player').css('background-position', `-${position}px 0px`);
 //we use the ES6 template literal to insert the variable "position"
 if (position < 1601)
 { position = position + 
 diff;}
-//we increment the position by 400 each time
+//we increment the position by 50 each time
 else
-{ position = 400; }
-//reset the position to 400px, once position exceeds 1536px
+{ position = 50; }
+//reset the position to 50px, once position exceeds 1536px
 }
 , interval ); //end of setInterval
 } //end of animateScript()

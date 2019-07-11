@@ -41,7 +41,7 @@ function collision(obj1, obj2) {
 //--------------------------------------------Animation Functions------------------------------------------------
 
 let tID; //clear the setInterval()
-let moving = 0;
+let moving = 0; //variable used to limit the animation function from being triggered more than once
 
 function stopAnimate() {
 clearInterval(tID);
@@ -49,13 +49,19 @@ moving = 0;
 $('.player').css('background-position', `-0px 0px`);
 }
 
-function animateScript() {
-let    position = 50; //start position for the image slicer
+function animateScript(positionVar,directionVar) {
+//direction 0 is down
+//direction 75 is right
+//direction 150 is left
+//direction 225 is up
+
+let    position = positionVar; //start position for the image slicer
 const  interval = 100; //100 ms of interval for the setInterval()
+let direction = directionVar;
 const  diff = 50;     //diff as a variable for position offset
 
 tID = setInterval ( () => {
-$('.player').css('background-position', `-${position}px 0px`);
+$('.player').css('background-position', `-${position}px ${direction}px`);
 
 if (position < 200)
 { position = position + 
@@ -72,12 +78,20 @@ else
 
 //----------------------------------------------User Control Functions-------------------------------------------------
 
+//function to detect when user lets go of a movement key in order to stop the animation
 $(document).keyup(function (e) {
 
-  if (e.which === 38) {
+  if (e.which === 37) {
     stopAnimate();
-
-    console.log(tID);
+  }
+  else if (e.which === 38) {
+    stopAnimate();
+  }
+  else if (e.which === 39) {
+    stopAnimate();
+  }
+  else if (e.which === 40) {
+    stopAnimate();
   }
 
 })
@@ -92,6 +106,7 @@ $(document).keydown(function (e) {
   let aboutmeHouse = $(".aboutMe");
 
 
+  //a function that checks for all possible collisions that can occur between the user and other assets
   let checkCollisions = function() {
     if (collision(resumeHouse, player)) {
       console.log("Touching Resume Building")
@@ -129,8 +144,9 @@ $(document).keydown(function (e) {
 
         moving++;
         if (moving === 1){
-        animateScript();
+        animateScript(50,225);
         }
+
         checkCollisions();
 
         //if collision is detected, bounce back
@@ -148,6 +164,11 @@ $(document).keydown(function (e) {
         $(".player").finish().animate({
             left: "-=10"
         }, 100);
+
+        moving++;
+        if (moving === 1){
+        animateScript(50,150);
+        }
 
         checkCollisions();
 
@@ -167,6 +188,11 @@ $(document).keydown(function (e) {
             left: "+=10"
         }, 100);
 
+        moving++;
+        if (moving === 1){
+        animateScript(50,75);
+        }
+
         checkCollisions();
 
         //if collision is detected, bounce back
@@ -184,6 +210,11 @@ $(document).keydown(function (e) {
         $(".player").finish().animate({
             top: "+=10"
         }, 100); 
+
+        moving++;
+        if (moving === 1){
+        animateScript(50,0);
+        }
 
         checkCollisions();
 

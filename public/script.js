@@ -38,6 +38,50 @@ function collision(obj1, obj2) {
   return true;
 }
 
+//--------------------------------------------Animation Functions------------------------------------------------
+
+let tID; //clear the setInterval()
+let moving = 0;
+
+function stopAnimate() {
+clearInterval(tID);
+moving = 0;
+$('.player').css('background-position', `-0px 0px`);
+}
+
+function animateScript() {
+let    position = 50; //start position for the image slicer
+const  interval = 100; //100 ms of interval for the setInterval()
+const  diff = 50;     //diff as a variable for position offset
+
+tID = setInterval ( () => {
+$('.player').css('background-position', `-${position}px 0px`);
+
+if (position < 200)
+{ position = position + 
+diff;}
+
+//we increment the position by 50 each time
+else
+{ position = 50; }
+//reset the position to 50px, once position exceeds 1536px
+}
+, interval ); //end of setInterval
+
+} //end of animateScript()
+
+//----------------------------------------------User Control Functions-------------------------------------------------
+
+$(document).keyup(function (e) {
+
+  if (e.which === 38) {
+    stopAnimate();
+
+    console.log(tID);
+  }
+
+})
+
 let colliding = false;
 //All of the player movements
 $(document).keydown(function (e) {
@@ -47,28 +91,6 @@ $(document).keydown(function (e) {
   let contactHouse = $(".contact");
   let aboutmeHouse = $(".aboutMe");
 
-  var tID; //we will use this variable to clear the setInterval()
-function stopAnimate() {
-clearInterval(tID);
-}
- //end of stopAnimate()
-function animateScript() {
-var    position = 50; //start position for the image slicer
-const  interval = 100; //100 ms of interval for the setInterval()
-const  diff = 50;     //diff as a variable for position offset
-tID = setInterval ( () => {
-$('.player').css('background-position', `-${position}px 0px`);
-//we use the ES6 template literal to insert the variable "position"
-if (position < 1601)
-{ position = position + 
-diff;}
-//we increment the position by 50 each time
-else
-{ position = 50; }
-//reset the position to 50px, once position exceeds 1536px
-}
-, interval ); //end of setInterval
-} //end of animateScript()
 
   let checkCollisions = function() {
     if (collision(resumeHouse, player)) {
@@ -105,7 +127,10 @@ else
             top: "-=10"
         }, 100);
 
+        moving++;
+        if (moving === 1){
         animateScript();
+        }
         checkCollisions();
 
         //if collision is detected, bounce back
@@ -168,9 +193,10 @@ else
             top: "-=20"
         }, 100);   
         }
+
     }
+
+    
+    
+    
   });
-
-
-  //in collision function
-  // if collision true set collion to true and check for that function in movement to set back equal movement axies

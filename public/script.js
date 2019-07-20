@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-
 //hides all popups on load up  
 hideHouses();
 

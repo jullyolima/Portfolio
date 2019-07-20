@@ -15,7 +15,8 @@ class Main extends React.Component {
   }
 
   componentDidMount = () => {
-
+    console.log("Main mounted")
+    // window.music();
 
   }
 

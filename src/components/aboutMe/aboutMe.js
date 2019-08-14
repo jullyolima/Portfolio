@@ -14,7 +14,7 @@ class AboutMe extends React.Component {
             <div id="aboutMeBox" className="modal">
           <div className="modal-content">
             <span className="close">&times;</span>
-            <p>About Me</p>
+            <p>Under Construction!</p>
           </div>
         </div>
         )

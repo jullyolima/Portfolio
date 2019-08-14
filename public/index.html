@@ -20,19 +20,8 @@
   <audio id="music" src="./assets/music.mp3"></audio>
 
   <script>
-    //music function
-    var playPromise = music.play();
-
-    if (playPromise !== undefined) {
-      playPromise.then(_ => {
-        // Automatic playback started!
-        // Show playing UI.
-
-      })
-        .catch(error => {
-          // Auto-play was prevented
-          // Show paused UI.
-        });
+    window.music = function () {
+        document.getElementById('music').play()
     }
 
   </script>

@@ -9,6 +9,10 @@ $( ".close" ).click(function() {
   hideHouses(); 
 });
 
+$( ".musicBtn" ).click(function() {
+  window.music();
+});
+
 })
 //function that closes any and all "house" boxes
 function hideHouses () {
